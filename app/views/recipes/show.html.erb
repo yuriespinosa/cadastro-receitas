@@ -10,6 +10,10 @@
   <p>
     <%= @recipe.calories %>
   </p>
+  <h3> Modo de Preparo </h3>
+  <p>
+    <%= @recipe.prepare_mode %>
+  </p>
   <h3> Custo </h3>
   <p>
     <%= @recipe.cost %>
@@ -17,3 +21,4 @@
 </article>
 
 <%= link_to "Receitas", recipes_path %>
+<%= link_to "Editar Receita", edit_recipe_path(@recipe) %>
