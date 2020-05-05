@@ -1,11 +1,5 @@
 <div class="container">
 
-<style>
-.nova_receita {
-  float: right;
-}
-</style>
-
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header"><%= pluralize(@recipes.size, "Receita", "Receitas") %>
@@ -30,7 +24,7 @@
       <h4>Custo:</h4>
       <p><%= number_to_currency(recipe.cost) %></p>
     </div>
-  </div>
+</div>
     
   <hr>
 
