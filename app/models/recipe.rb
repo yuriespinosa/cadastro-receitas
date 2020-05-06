@@ -1,5 +1,4 @@
 class Recipe < ApplicationRecord
-
   validates :name, :stuff, :duration, :prepare_mode, presence:true
   validates_length_of :stuff, maximum:200
   validates_length_of :prepare_mode, maximum:200
@@ -8,6 +7,8 @@ class Recipe < ApplicationRecord
   
   KIND = %w(Carnes Aves Massas Saladas Doces)
   validates_inclusion_of :kind, in: KIND
+
+  has_many :comments, dependent: :destroy
 
   def light?
     calories < 100

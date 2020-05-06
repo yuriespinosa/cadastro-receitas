@@ -33,3 +33,10 @@ Recipe.create!([
     poster: "salmao.jpg"
   },
 ])
+
+receita = Recipe.find_by(id: 1)
+receita.comments.create!(name: "Yuri Pires", rating: 8, comment: "Saboroso")
+receita.comments.create!(name: "Yuri Pires", rating: 9, comment: "Extremammente bom!")
+
+receita = Recipe.find_by(id: 2)
+receita.comments.create!(name: "Yuri Pires", rating: 9, comment: "Melhor pizza do mundo!")
