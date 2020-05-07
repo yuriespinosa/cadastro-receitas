@@ -34,6 +34,7 @@
     <%= @recipe.cost %>
   </p>
 </article>
+<%= link_to pluralize(@recipe.comments.size, 'Comentário', 'Comentários'), recipe_comments_path(@recipe) %>
 </div>
 </div>
 
